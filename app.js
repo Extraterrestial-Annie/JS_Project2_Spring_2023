@@ -1,6 +1,6 @@
 function kino() {
     var kinoFetch = new XMLHttpRequest();
-    kinoFetch.open("GET","https://www.finnkino.fi/xml/Schedule/?area=1014&dt=02.05.2023",true
+    kinoFetch.open("GET","https://www.finnkino.fi/xml/Schedule/?area=1014&dt=02.05.2023/1882503",true
     );
     kinoFetch.send();
 }
