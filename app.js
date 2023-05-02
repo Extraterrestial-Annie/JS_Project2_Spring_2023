@@ -9,6 +9,7 @@ kinoFetch.onreadystatechange=function() {
         kinoFetch.status==200){
         document.getElementById("kino").innerHTML=
         kinoFetch.responseText;
+        console.log(kinoFetch.responseText)
     }
     }
     
