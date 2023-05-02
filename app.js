@@ -1,6 +1,6 @@
 function kino() {
     var kinoFetch = new XMLHttpRequest();
-    kinoFetch.open("GET","https://www.finnkino.fi/xml/Events/?Event=304123",true
+    kinoFetch.open("GET","https://www.finnkino.fi/xml/Events/?EventID=304123",true
     );
     kinoFetch.send();
     kinoFetch.onreadystatechange=function() {
