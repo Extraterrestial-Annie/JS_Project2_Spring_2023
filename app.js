@@ -21,12 +21,12 @@ function theatres() {
                 '<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">'+
                     '<a href="#" id="menuLink1" class="pure-menu-link">Theatres</a>'+
                     '<ul class="pure-menu-children">';
-                console.log(theatreIds.value)
-                console.log(theatreNames.value)
+                console.log(typeof theatreIds)
+                console.log(typeof theatreNames)
                 for (let i = 0; i < theatreIds.length; i++) {
                     theatres += 
                     '<li class="pure-menu-item">'+
-                        '<a href="#" id="' + theatreIds[i].value + '" class="pure-menu-link">' + theatreNames[i].value + '</a>'+
+                        '<a href="#" id="' + theatreIds[i] + '" class="pure-menu-link">' + theatreNames[i] + '</a>'+
                     '</li>';
                   }   
                   
