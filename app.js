@@ -21,10 +21,15 @@ function theatres() {
                 var theatreNames = theatresFetch.responseXML.getElementsByTagName("Name")
                 console.log(theatreNames)
 
+
+                var list = '<ul>'
+
                 for (let i = 0; i < theatreNames.length; i++){
                     console.log(theatreNames[i].innerHTML)
+                    list = list + '<li class="pure-menu-item">' + theatreNames[i].innerHTML + '´</li>'
 
                 }
+                list = list + '</ul>'
 
 
                 var theatres = '<ul class="pure-menu-list">'+
@@ -45,7 +50,7 @@ function theatres() {
                     '</ul>'+
                 '</li>'+
             '</ul>'
-                document.getElementById("theatres").innerHTML = theatres;
+                document.getElementById("theatres").innerHTML = list;
         }
     }
 }
