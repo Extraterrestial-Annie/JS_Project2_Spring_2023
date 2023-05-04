@@ -6,6 +6,13 @@ let year = date.getFullYear();
 
 let dateNow = '${day}.${month}.${year}';
 
+function toArray(arraylike) {
+    var array= new Array(arraylike.length);
+    for (var i= 0, n= arraylike.length; i<n; i++)
+        array[i]= arraylike[i];
+    return array;
+}
+
 function theatres() {
     var theatresFetch = new XMLHttpRequest();
     theatresFetch.open("GET","https://www.finnkino.fi/xml/TheatreAreas/",true
@@ -15,8 +22,8 @@ function theatres() {
         //console.log(typeof theatresFetch.responseXML)
         if (theatresFetch.readyState==4 &&
             theatresFetch.status==200){
-                var theatreIds = theatresFetch.responseXML.getElementsByTagName("ID")
-                var theatreNames = theatresFetch.responseXML.getElementsByTagName("Name")
+                var theatreIds = toArray(theatresFetch.responseXML.getElementsByTagName("ID"))
+                var theatreNames = toArray(theatresFetch.responseXML.getElementsByTagName("Name"))
                 var theatres = '<ul class="pure-menu-list">'+
                 '<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">'+
                     '<a href="#" id="menuLink1" class="pure-menu-link">Theatres</a>'+
