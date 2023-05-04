@@ -11,8 +11,8 @@ function theatres() {
     theatresFetch.open("GET","https://www.finnkino.fi/xml/TheatreAreas/",true
     );
     theatresFetch.send();
-    console.log(theatresFetch.responseText)
     theatresFetch.onreadystatechange=function() {
+        console.log(theatresFetch.responseText)
         if (theatresFetch.readyState==4 &&
             theatresFetch.status==200){
                 var theatreIds = theatresFetch.responseText.getElementsByTagName("ID")
