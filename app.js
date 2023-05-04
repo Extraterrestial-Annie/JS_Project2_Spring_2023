@@ -11,6 +11,7 @@ function theatres() {
     theatresFetch.open("GET","https://www.finnkino.fi/xml/TheatreAreas/",true
     );
     theatresFetch.send();
+    console.log(theatresFetch.responseText)
     theatresFetch.onreadystatechange=function() {
         if (theatresFetch.readyState==4 &&
             theatresFetch.status==200){
@@ -24,7 +25,7 @@ function theatres() {
                 for (let i = 0; i < theatreIds.length; i++) {
                     theatres += 
                     '<li class="pure-menu-item">'+
-                        '<a href="#" class="pure-menu-link">' + theatreNames[i] + '</a>'+
+                        '<a href="#" id=' + theatreIds[i] + ' class="pure-menu-link">' + theatreNames[i] + '</a>'+
                     '</li>';
                   }   
                   
