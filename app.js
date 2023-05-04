@@ -25,7 +25,7 @@ function theatres() {
                 for (let i = 0; i < theatreIds.length; i++) {
                     theatres += 
                     '<li class="pure-menu-item">'+
-                        '<a href="#" id=' + theatreIds[i] + ' class="pure-menu-link">' + theatreNames[i] + '</a>'+
+                        '<a href="#" id="' + theatreIds[i] + '" class="pure-menu-link">' + theatreNames[i] + '</a>'+
                     '</li>';
                   }   
                   
