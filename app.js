@@ -16,8 +16,11 @@ function theatres() {
         if (theatresFetch.readyState==4 &&
             theatresFetch.status==200){
                 var theatreIds = theatresFetch.responseXML.getElementsByTagName("ID")
+
  
                 var theatreNames = theatresFetch.responseXML.getElementsByTagName("Name")
+                console.log(theatreNames)
+
                 var theatres = '<ul class="pure-menu-list">'+
                 '<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">'+
                     '<a href="#" id="menuLink1" class="pure-menu-link">Theatres</a>'+
