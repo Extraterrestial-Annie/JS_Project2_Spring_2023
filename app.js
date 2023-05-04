@@ -10,7 +10,7 @@ function theatres() {
     var theatresFetch = new XMLHttpRequest();
     theatresFetch.open("GET","https://www.finnkino.fi/xml/TheatreAreas/",true
     );
-    
+    theatresFetch.send();
     theatresFetch.onreadystatechange=function() {
         console.log(typeof theatresFetch.responseText)
         if (theatresFetch.readyState==4 &&
