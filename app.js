@@ -12,7 +12,7 @@ function theatres() {
     );
     theatresFetch.send();
     theatresFetch.onreadystatechange=function() {
-        console.log(theatresFetch.responseText)
+        console.log(typeof theatresFetch.responseText)
         if (theatresFetch.readyState==4 &&
             theatresFetch.status==200){
                 var theatreIds = theatresFetch.responseText.getElementsByTagName("ID")
