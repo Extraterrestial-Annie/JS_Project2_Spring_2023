@@ -12,7 +12,7 @@ function theatres() {
     );
     theatresFetch.send();
     theatresFetch.onreadystatechange=function() {
-        console.log(typeof theatresFetch.responseXML)
+        //console.log(typeof theatresFetch.responseXML)
         if (theatresFetch.readyState==4 &&
             theatresFetch.status==200){
                 var theatreIds = theatresFetch.responseXML.getElementsByTagName("ID")
@@ -21,7 +21,7 @@ function theatres() {
                 '<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">'+
                     '<a href="#" id="menuLink1" class="pure-menu-link">Theatres</a>'+
                     '<ul class="pure-menu-children">';
-                 
+                console.log(theatreIds)
                 for (let i = 0; i < theatreIds.length; i++) {
                     theatres += 
                     '<li class="pure-menu-item">'+
