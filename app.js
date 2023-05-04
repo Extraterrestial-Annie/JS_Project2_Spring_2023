@@ -18,7 +18,7 @@ function theatres() {
                 var theatreIds = theatresFetch.responseXML.getElementsByTagName("ID")
 
  
-                var theatreNames = Array.from(theatresFetch.responseXML.getElementsByTagName("Name"))
+                var theatreNames = theatresFetch.responseXML.getElementsByTagName("Name")
                 console.log(theatreNames)
 
                 var theatres = '<ul class="pure-menu-list">'+
@@ -30,7 +30,7 @@ function theatres() {
                 for (let i = 0; i < theatreIds.length; i++) {
                     theatres += 
                     '<li class="pure-menu-item">'+
-                        '<a href="#" id="' + theatreIds[i] + '" class="pure-menu-link">' + theatreNames[i] + '</a>'+
+                        '<a href="#" id="' + theatreIds[i].innerHTML + '" class="pure-menu-link">' + theatreNames[i].innerHTML + '</a>'+
                     '</li>';
                   }   
                   
