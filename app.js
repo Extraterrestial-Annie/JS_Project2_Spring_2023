@@ -22,6 +22,7 @@ function theatres() {
                     '<a href="#" id="menuLink1" class="pure-menu-link">Theatres</a>'+
                     '<ul class="pure-menu-children">';
                 console.log(theatreIds)
+                console.log(theatreNames)
                 for (let i = 0; i < theatreIds.length; i++) {
                     theatres += 
                     '<li class="pure-menu-item">'+
