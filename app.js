@@ -21,6 +21,12 @@ function theatres() {
                 var theatreNames = theatresFetch.responseXML.getElementsByTagName("Name")
                 console.log(theatreNames)
 
+                for (let i = 0; i < theatreNames.length; i++){
+                    console.log(theatreNames[i].innerHTML)
+
+                }
+
+
                 var theatres = '<ul class="pure-menu-list">'+
                 '<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">'+
                     '<a href="#" id="menuLink1" class="pure-menu-link">Theatres</a>'+
