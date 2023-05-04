@@ -18,7 +18,7 @@ function theatres() {
                 var theatreIds = theatresFetch.responseXML.getElementsByTagName("ID")
 
  
-                var theatreNames = theatresFetch.responseXML.getElementsByTagName("Name")
+                var theatreNames = Array.from(theatresFetch.responseXML.getElementsByTagName("Name"))
                 console.log(theatreNames)
 
                 var theatres = '<ul class="pure-menu-list">'+
