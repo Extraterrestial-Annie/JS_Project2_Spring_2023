@@ -4,7 +4,7 @@ let day = date.getDate();
 let month = date.getMonth() + 1;
 let year = date.getFullYear();
 
-let dateNow = '${day}.${month}.${year}'
+let dateNow = '${day}.${month}.${year}';
 
 function theatres() {
     var theatresFetch = new XMLHttpRequest();
